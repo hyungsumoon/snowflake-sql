@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "mtxr.sqltools",
+    "sqlfluff.sqlfluff",
+    "redhat.vscode-yaml",
+    "mikestead.dotenv",
+    "timonwong.shellcheck",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "formulahendry.code-runner"
+  ]
+}

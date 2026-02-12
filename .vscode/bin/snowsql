@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Workspace wrapper: map legacy `snowsql` command to Snowflake CLI `snow sql`.
+# If `snow` is available, use it; otherwise fall back to system `snowsql` if present.
+if command -v snow >/dev/null 2>&1; then
+  exec snow sql "$@"
+fi
+if command -v snowsql >/dev/null 2>&1; then
+  exec snowsql "$@"
+fi
+echo "Neither 'snow' nor 'snowsql' found. Install Snowflake CLI or SnowSQL." >&2
+exit 2

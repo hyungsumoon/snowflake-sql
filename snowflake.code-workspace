@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "editor.formatOnSave": true
+  },
+  "extensions": {
+    "recommendations": []
+  }
+}

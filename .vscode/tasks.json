@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Snowflake Query (current file)",
+      "type": "shell",
+      "command": "sh",
+      "args": [
+        "-c",
+        "if command -v snow > /dev/null 2>&1; then \n  snow sql -a \"${env:SNOWFLAKE_ACCOUNT}\" -u \"${env:SNOWFLAKE_USER}\" -f \"${file}\"; \nelse \n  echo 'snow not found. Install Snowflake CLI (snow).'; \nfi"
+      ],
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
